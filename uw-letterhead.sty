@@ -1,7 +1,7 @@
-\usepackage{calc}
 \usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{ifthen}
 
 \newsavebox{\@uwlogo}
 \savebox{\@uwlogo}{\includegraphics[width=1.6875in]{uw-logo}}
@@ -9,25 +9,29 @@
 \settoheight{\@uwlogoheight}{\usebox{\@uwlogo}}
 \addtolength{\@uwlogoheight}{4pt}
 
-\newsavebox{\@uwfoot}
-\sbox{\@uwfoot}{%
+\newcommand{\@uwfootpage}[2]{%
   \begin{minipage}[b]{\textwidth}
     \sffamily
     \begin{center}
-      \textbf{Computer Sciences Department}
+      \textbf{%
+        \ifthenelse{\equal{#1}{}}{}{#1, }%
+        Computer Sciences Department}
 
       University of Wisconsin-Madison \quad
       1210 W. Dayton Street \quad
       Madison, Wisconsin 53706
 
-      608/262-1204 \quad
+      \ifthenelse{\equal{#2}{}}{608/262-1204}{#2} \quad
       Fax: 608/262-9777 \quad
       E-mail: cs@cs.wisc.edu \quad
       www.cs.wisc.edu      
     \end{center}
   \end{minipage}}
+
+\newsavebox{\@uwfootbox}
+\sbox{\@uwfootbox}{\@uwfootpage{}{}}
 \newlength{\@uwfootheight}
-\settoheight{\@uwfootheight}{\usebox{\@uwfoot}}
+\settoheight{\@uwfootheight}{\usebox{\@uwfootbox}}
 
 \addtolength{\@uwfootheight}{0.5in}
 
@@ -36,10 +40,12 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead[C]{\usebox{\@uwlogo}}
-%\fancyfoot[C]{foot!}
-\fancyfoot[C]{\usebox{\@uwfoot}}
+\fancyfoot[C]{\@uwfootpage{\fromname}{\telephonenum}}
 
 \fancypagestyle{firstpage}{%
+  \pagestyle{fancy}}
+
+\fancypagestyle{empty}{%
   \pagestyle{fancy}}
 
 \pagestyle{fancy}
