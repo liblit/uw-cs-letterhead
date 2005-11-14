@@ -12,10 +12,16 @@
 \newcommand{\@uwfootpage}[2]{%
   \begin{minipage}[b]{\textwidth}
     \sffamily
+
     \begin{center}
+
+      \fontsize{11}{13}\selectfont
+
       \textbf{%
         \ifthenelse{\equal{#1}{}}{}{#1, }%
         Computer Sciences Department}
+
+      \fontsize{10}{12}\selectfont
 
       University of Wisconsin-Madison \quad
       1210 W. Dayton Street \quad
@@ -25,6 +31,7 @@
       Fax: 608/262-9777 \quad
       E-mail: cs@cs.wisc.edu \quad
       www.cs.wisc.edu      
+
     \end{center}
   \end{minipage}}
 
