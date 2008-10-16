@@ -1,6 +1,7 @@
 \usepackage{fancyhdr}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{ifthen}
 
 \newboolean{preprinted}
@@ -21,26 +22,29 @@
 
     \begin{center}
 
-      \providecommand{\username}{cs}
-      \providecommand{\fromname}{}
-      \providecommand{\telephonenum}{608/262-1204}
+      \providecommand{\username}[0]{cs}
+      \providecommand{\fromname}[0]{}
+      \providecommand{\telephonenum}[0]{608/262-1204}
+      \providecommand{\faxnum}[0]{608/262-9777}
+      \providecommand{\emailaddr}[0]{{\username}@cs.wisc.edu}
+      \providecommand{\website}[0]{www.cs.wisc.edu}
 
       \fontsize{11}{13}\selectfont
 
       \textbf{%
-        \ifthenelse{\equal{\fromname}{}}{}{\fromname, }%
-        Computer Sciences Department}
+	\ifthenelse{\equal{\fromname}{}}{}{\fromname, }%
+	Computer Sciences Department}
 
       \fontsize{10}{12}\selectfont
 
-      University of Wisconsin-Madison \quad
+      University of Wisconsin--Madison \quad
       1210 W. Dayton Street \quad
       Madison, Wisconsin 53706
 
       \telephonenum \quad
-      Fax: 608/262-9777 \quad
-      E-mail: \username{}@cs.wisc.edu \quad
-      www.cs.wisc.edu
+      Fax: \faxnum \quad
+      E-mail: \emailaddr \quad
+      \website
 
     \end{center}
   \end{minipage}}
@@ -51,6 +55,14 @@
 \settoheight{\@uwfootheight}{\usebox{\@uwfootbox}}
 
 \addtolength{\@uwfootheight}{0.5in}
+
+\makeatother
+\providecommand{\emailaddr}[0]{\href{mailto:\username@cs.wisc.edu}{\username@cs.wisc.edu}}
+\makeatletter
+
+\providecommand{\telephonenum}[0]{\href{tel:+1-(608)-262-1204}{608/262-1204}}
+\providecommand{\faxnum}[0]{\href{fax:+1-(608)-262-9777}{608/262-9777}}
+\providecommand{\website}[0]{\href{http://www.cs.wisc.edu/}{www.cs.wisc.edu}}
 
 \geometry{letterpaper,includehead,includefoot,top=1in,bottom=0.2in,head=\@uwlogoheight,foot=\@uwfootheight,headsep=0.5in}
 
