@@ -1,3 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  customization via package options
+%
+
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{prefix=uw@}
+
+\DeclareBoolOption{preprinted}
+\DeclareStringOption[cs]{username}
+\DeclareStringOption[2-1204]{extension}
+
+\DeclareDefaultOption{%
+  \PassOptionsToClass{\CurrentOption}{letter}%
+}
+
+\ProcessKeyvalOptions*
+
 \LoadClass{letter}
 
 \usepackage{etoolbox}
@@ -5,30 +23,14 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{kvoptions}
 \usepackage{textcomp}
 \usepackage{xstring}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  customization via package options
-%
-
-\SetupKeyvalOptions{prefix=uw@}
-
-\DeclareBoolOption{preprinted}
-\DeclareStringOption[cs]{username}
-\DeclareStringOption[2-1204]{extension}
-
-\ProcessKeyvalOptions*
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 %  footer
 %
-
 
 \newcommand{\uw@mailto}[1]{\href{mailto:#1@cs.wisc.edu}{#1@cs.wisc.edu}}
 
