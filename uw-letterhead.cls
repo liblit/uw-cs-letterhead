@@ -66,7 +66,7 @@
   \renewcommand{\headrulewidth}{0pt}
   \setlength{\footskip}{50pt}
   \fancyhf{}
-  \fancyfoot[C]{\uw@footer}}
+  \notbool{uw@preprinted}{\fancyfoot[C]{\uw@footer}}{}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
