@@ -44,7 +44,7 @@
 
       \textbf{%
         \ifcsempty{fromname}{}{\fromname, }%
-        Computer Sciences Department}
+        Department of Computer Sciences}
 
       \fontsize{10}{12}\selectfont
 
