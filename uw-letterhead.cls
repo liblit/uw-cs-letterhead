@@ -74,13 +74,17 @@
 %  top logo
 %
 
-\newsavebox{\uwlogo}
-\savebox{\uwlogo}{\includegraphics[width=114pt]{uw-logo}}
-
-\newlength{\uwlogoheight}
-\settoheight{\uwlogoheight}{\usebox{\uwlogo}}
+\newsavebox{\@uwlogo}
+\savebox{\@uwlogo}{\includegraphics[height=1.65in]{uw-logo}}
 
 \apptocmd{\letter}{%
+  \vspace*{-1.15in}
   \begin{center}%
-    \ifbool{uw@preprinted}{\rule{0pt}{\uwlogoheight}}{\usebox{\uwlogo}}%
+    \ifbool{uw@preprinted}{%
+      \newlength{\@uwlogoheight}
+      \settoheight{\@uwlogoheight}{\usebox{\@uwlogo}}
+      \rule{0pt}{\@uwlogoheight}
+    }{%
+      \usebox{\@uwlogo}%
+    }
   \end{center}}{}{}
