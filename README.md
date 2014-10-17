@@ -30,7 +30,8 @@ is "+1 (608) 261-2345", then use `extension=1-2345`.
 The generated document includes extra letterhead content in the header
 and footer of the first page of each letter.  If you are using
 pre-printed letterhead paper, then use the `preprinted` document class
-option to leave these areas blank.
+option to leave these areas blank.  Note that `preprinted` makes the
+`username=...` and `extension=...` options moot.
 
 
 Design
