@@ -23,9 +23,9 @@
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
-\RequirePackage{textcomp}
 \RequirePackage{xstring}
 
+\RequirePackage{midtilde}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -57,7 +57,7 @@
       E-mail: \uw@mailto{\ifcsempty{uw@username}{chair}{\uw@username}} \quad
       \ifcsempty{uw@username}{%
         \href{http://www.cs.wisc.edu/}{www.cs.wisc.edu}}{%
-        \href{http://pages.cs.wisc.edu/~\uw@username/}{pages.cs.wisc.edu/\texttildelow\uw@username}}
+        \href{http://pages.cs.wisc.edu/~\uw@username/}{pages.cs.wisc.edu/\midtilde\uw@username}}
 
     \end{center}
   \end{minipage}}
