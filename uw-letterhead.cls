@@ -7,7 +7,7 @@
 \SetupKeyvalOptions{prefix=uw@}
 
 \DeclareBoolOption{preprinted}
-\DeclareStringOption[cs]{username}
+\DeclareStringOption{username}
 \DeclareStringOption[2-1204]{extension}
 
 \DeclareDefaultOption{%
@@ -18,13 +18,13 @@
 
 \LoadClass{letter}
 
-\usepackage{etoolbox}
-\usepackage{fancyhdr}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{textcomp}
-\usepackage{xstring}
+\RequirePackage{etoolbox}
+\RequirePackage{fancyhdr}
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{textcomp}
+\RequirePackage{xstring}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,7 +44,7 @@
 
       \textbf{%
         \ifcsempty{fromname}{}{\fromname, }%
-        Department of Computer Sciences}
+        Computer Sciences Department}
 
       \fontsize{10}{12}\selectfont
 
@@ -54,8 +54,8 @@
 
       \href{tel:+1-(608)-26\uw@extension}{608/26\uw@extension} \quad
       Fax: \href{fax:+1-(608)-262-9777}{608/262-9777} \quad
-      E-mail: \uw@mailto{\uw@username} \quad
-      \ifcsequal{uw@username}{cs}{%
+      E-mail: \uw@mailto{\ifcsempty{uw@username}{chair}{\uw@username}} \quad
+      \ifcsempty{uw@username}{%
         \href{http://www.cs.wisc.edu/}{www.cs.wisc.edu}}{%
         \href{http://pages.cs.wisc.edu/~\uw@username/}{pages.cs.wisc.edu/\texttildelow\uw@username}}
 
