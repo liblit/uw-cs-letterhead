@@ -2,10 +2,11 @@ General Use
 -----------
 
 Start your document with `\documentclass{uw-letterhead}`.  Then
-proceed as you ordinarily would if you were using the `letter`
-document class.  For example, use `\name{...}`, `\signature{...}`,
-`\closing{...}`, `\begin{letter}{} ... \end{letter}`, etc.  Everything
-expected in the standard `letter` class works here too.
+proceed as you ordinarily would if you were using the
+[`letter` document class](http://www.texdoc.net/pkg/letter).
+For example, use `\name{...}`, `\signature{...}`, `\closing{...}`,
+`\begin{letter}{} ... \end{letter}`, etc.  Everything expected in the
+standard `letter` class works here too.
 
 Render your document to PDF using `pdflatex`.  I have made no effort
 to support rendering to DVI using `latex`.
@@ -13,6 +14,10 @@ to support rendering to DVI using `latex`.
 
 Customization
 -------------
+
+If you use the standard `\name{...}` macro from the `letter` document
+class to set the sender's name, this will also appear in the footer
+before "Computer Sciences Department".
 
 The footer mentions a generic departmental e-mail address and web
 site.  Use the `username=...` document class option for a more custom
@@ -33,14 +38,18 @@ pre-printed letterhead paper, then use the `preprinted` document class
 option to leave these areas blank.  Note that `preprinted` makes the
 `username=...` and `extension=...` options moot.
 
+The footer text on the first page of each letter uses the default
+sans-serif font.  If you load other packages that change the default
+sans-serif font, that change will apply to the footer as well.
+
 
 Design
 ------
 
 The first page of each letter should closely resemble the preprinted
 departmental letterhead found in the `letterhead` printer on the 5th
-floor of the CS building.  The following are known, intentional
-deviations from that paper reference:
+floor of the CS building.  The following are known deviations from
+that paper reference:
 
 * This document class uses the official UW logo derived from material
   provided by
@@ -50,8 +59,13 @@ deviations from that paper reference:
 * This document class uses a proper en dash before "Madison" in the
   footer.  The paper letterhead incorrectly uses a hyphen.
 
-* The footer font used by this document class resembles that used by
-  the paper letterhead, but the two are not identical.
+* The footer of the paper letterhead uses Friz Quadrata Bold and
+  Optima: commercial fonts not available in a standard TeXLive
+  installation.  Instead this document class uses the default
+  sans-serif font for the entire footer, boldfaced on the first line.
+  As mentioned above, if you have loaded other packages that change
+  the default sans-serif font, that change will apply to the footer as
+  well.
 
 
 Non-Bugs
