@@ -1,7 +1,7 @@
 General Use
 -----------
 
-Start your document with `\documentclass{uw-letterhead}`.  Then
+Start your document with `\documentclass{uw-cs-letterhead}`.  Then
 proceed as you ordinarily would if you were using the
 [`letter` document class](http://www.texdoc.net/pkg/letter).
 For example, use `\name{...}`, `\signature{...}`, `\closing{...}`,
