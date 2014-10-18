@@ -1,0 +1,28 @@
+% based on <http://tex.stackexchange.com/a/160898/1288>
+% with added fixes for t1ntxrx and t1ntxss from newtxtext
+
+\RequirePackage{textcomp}
+
+\newcommand\midtilde@raisedtilde[1][.5]{\raisebox{#1ex}{\texttildelow}}
+\def\midtilde@normaltilde{\texttildelow}
+
+\newcommand\midtilde%
+{%
+  \expandafter\in@\expandafter{\f@family}%
+    {cmr,cmss,cmtt,cmm,cmsy,cmx,%
+    lmr,lmss,lmtt,lmm,lmsy,lmx,%
+    pxr,pxss,pxm,pxsy,pxx,%
+    txr,txss,txm,txsy,txx,%
+    t1ntxrx,t1ntxss}%
+  \ifin@%
+    \midtilde@raisedtilde%
+  \else%
+    \expandafter\in@\expandafter{\f@family}%
+    {pxtt,txtt}%
+    \ifin@%
+      \midtilde@raisedtilde[.35]%
+    \else%
+      \midtilde@normaltilde%
+    \fi%
+  \fi%
+}
