@@ -56,6 +56,11 @@ that paper reference:
   [University Marketing](http://umark.wisc.edu/brand/print/).  The
   paper letterhead uses an older or alternate logo.
 
+* The footer of this document class refers to the department as the
+  “Department of Computer Sciences”, which is its proper name.  The
+  paper letterhead incorrectly refers to the department as the
+  “Computer Sciences Department”.
+
 * This document class uses a proper en dash before "Madison" in the
   footer.  The paper letterhead incorrectly uses a hyphen.
 
