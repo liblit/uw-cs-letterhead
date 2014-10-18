@@ -1,0 +1,9 @@
+*~
+.sconsign.dblite
+auto
+example.aux
+example.dvi
+example.fls
+example.log
+example.out
+example.pdf
