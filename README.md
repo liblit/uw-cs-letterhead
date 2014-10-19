@@ -14,7 +14,7 @@ Customization
 
 If you use the standard `\name{...}` macro from the `letter` document
 class to set the sender's name, this will also appear in the footer
-before “Computer Sciences Department”.
+before “Department of Computer Sciences”.
 
 The footer mentions a generic departmental e-mail address and web
 site.  Use the `username=...` document class option for a more custom
@@ -61,13 +61,13 @@ that paper reference:
 * The footer of this document class uses a proper en dash before
   “Madison”.  The paper letterhead incorrectly uses a hyphen.
 
-* The footer of the paper letterhead Friz Quadrata Bold on the first
-  line and Optima on the remaining lines.  These commercial fonts are
-  not available in a standard TeXLive installation.  Therefore, this
-  document class uses the default sans-serif font for the entire
-  footer, boldfaced on the first line.  As mentioned above, if you
-  have loaded other packages that change the default sans-serif font,
-  that change will apply to the footer as well.
+* The footer of the paper letterhead uses Friz Quadrata Bold on the
+  first line and Optima on the remaining lines.  These commercial
+  fonts are not available in a standard TeXLive installation.
+  Therefore, this document class uses the default sans-serif font for
+  the entire footer, boldfaced on the first line.  As mentioned above,
+  if you have loaded other packages that change the default sans-serif
+  font, that change will apply to the footer as well.
 
 
 Non-Bugs
