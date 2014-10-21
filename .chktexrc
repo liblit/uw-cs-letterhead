@@ -1,0 +1,5 @@
+# allow en dash in "University of Wisconsin--Madison"
+HyphDash { 2 }
+
+# allow hyphen in campus phone numbers such as "2-1940"
+NumDash { 1 }
