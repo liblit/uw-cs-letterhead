@@ -4,6 +4,7 @@ from SCons.Script import *
 
 env = Environment()
 env.AppendUnique(PDFLATEXFLAGS=['-interaction=batchmode', '-file-line-error'])
+env.PrependENVPath('PATH', '/s/texlive-2012/bin')
 
 
 ########################################################################
