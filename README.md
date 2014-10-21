@@ -78,3 +78,14 @@ portion of the “W” crest in the upper letterhead graphic.  This is an
 Evince bug, and it also affects paper copies printed from Evince 2.28.
 Avoid this bug by viewing or printing the document from Acrobat Reader
 or a later version of Evince.
+
+The preprinted paper letterhead includes header and footer content
+fairly close to the top and bottom edges of the paper.  This document
+class faithfully reproduces that design.  In my experience, modern
+laser printers can print much closer to the paper edge than the PDF
+viewers seem to think.  When printing from a PDF viewer, try turning
+*off* any “Page Scaling” print options.  Shrinking or fitting to the
+“printable area” simply causes an unnecessary deviation from the
+preprinted original.  That being said, do examine your paper printout
+to check whether any header or footer content has been cut off due to
+real limitations on your printer’s printable area.
