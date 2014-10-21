@@ -13,7 +13,7 @@ Customization
 -------------
 
 If you use the standard `\name{...}` macro from the `letter` document
-class to set the sender's name, this will also appear in the footer
+class to set the sender’s name, this will also appear in the footer
 before “Department of Computer Sciences”.
 
 The footer mentions a generic departmental e-mail address and web
