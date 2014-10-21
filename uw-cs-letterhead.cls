@@ -35,30 +35,26 @@
 
 \newcommand{\uw@footer}[0]{
   \begin{minipage}[b]{\textwidth}
+    \centering
     \sffamily
+    %
+    \fontsize{11}{13}\selectfont
+    \textbf{%
+      \ifcsempty{fromname}{}{\fromname, }%
+      Department of Computer Sciences}
 
-    \begin{center}
+    \fontsize{10}{12}\selectfont
+    %
+    University of Wisconsin--Madison \quad
+    1210 W. Dayton Street \quad
+    Madison, Wisconsin 53706
 
-      \fontsize{11}{13}\selectfont
-
-      \textbf{%
-        \ifcsempty{fromname}{}{\fromname, }%
-        Department of Computer Sciences}
-
-      \fontsize{10}{12}\selectfont
-
-      University of Wisconsin--Madison \quad
-      1210 W. Dayton Street \quad
-      Madison, Wisconsin 53706
-
-      \href{tel:+1-(608)-26\uw@extension}{608/26\uw@extension} \quad
-      Fax: \href{fax:+1-(608)-262-9777}{608/262-9777} \quad
-      E-mail: \uw@mailto{\ifcsempty{uw@username}{chair}{\uw@username}} \quad
-      \ifcsempty{uw@username}{%
-        \href{http://www.cs.wisc.edu/}{www.cs.wisc.edu}}{%
-        \href{http://pages.cs.wisc.edu/~\uw@username/}{pages.cs.wisc.edu/\midtilde\uw@username}}
-
-    \end{center}
+    \href{tel:+1-(608)-26\uw@extension}{608/26\uw@extension} \quad
+    Fax: \href{fax:+1-(608)-262-9777}{608/262-9777} \quad
+    E-mail: \uw@mailto{\ifcsempty{uw@username}{chair}{\uw@username}} \quad
+    \ifcsempty{uw@username}{%
+      \href{http://www.cs.wisc.edu/}{www.cs.wisc.edu}}{%
+      \href{http://pages.cs.wisc.edu/~\uw@username/}{pages.cs.wisc.edu/\midtilde\uw@username}}
   \end{minipage}}
 
 \fancypagestyle{firstpage}{%
