@@ -23,7 +23,6 @@
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
-\RequirePackage{xstring}
 
 \RequirePackage{midtilde}
 
