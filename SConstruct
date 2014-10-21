@@ -14,5 +14,9 @@ original = Command('UWlogo_ctr_4c.pdf', Value('http://www.uc.wisc.edu/brand/temp
 cropped = Command('uw-logo.pdf', original, 'pdfcrop $SOURCE $TARGET')
 eps = Command('uw-logo.eps', cropped, 'pdftops -eps $SOURCE $TARGET')
 
-example = env.PDF('example.tex')
-Depends(example, cropped)
+pdf = env.PDF('example.tex')
+Depends(pdf, cropped)
+
+dvi = env.DVI('example.tex')
+ps = env.PostScript(dvi)
+Depends((dvi, ps), eps)
