@@ -20,3 +20,6 @@ Depends(pdf, cropped)
 dvi = env.DVI('example.tex')
 ps = env.PostScript(dvi)
 Depends((dvi, ps), eps)
+
+cls = File('uw-cs-letterhead.cls')
+Depends((pdf, dvi), cls)
