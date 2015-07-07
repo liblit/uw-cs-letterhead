@@ -11,8 +11,8 @@ env.PrependENVPath('PATH', '/s/texlive-2014/bin')
 
 
 original = Command('UWlogo_ctr_4c.pdf', Value('http://www.uc.wisc.edu/brand/templates-and-downloads/downloads/print/UWlogo_ctr_4c.pdf'), 'wget --no-verbose --output-document=$TARGET $SOURCE')
-cropped = Command('uw-logo.pdf', original, 'pdfcrop $SOURCE $TARGET')
-eps = Command('uw-logo.eps', cropped, 'pdftops -eps $SOURCE $TARGET')
+cropped = env.Command('uw-logo.pdf', original, 'pdfcrop $SOURCE $TARGET')
+eps = env.Command('uw-logo.eps', cropped, 'pdftops -eps $SOURCE $TARGET')
 
 pdf = env.PDF('example.tex')
 Depends(pdf, cropped)
